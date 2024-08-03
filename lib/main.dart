@@ -92,12 +92,43 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: 50),
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            SizedBox(height: 50),
+            Expanded(
+              child: ListView(
+                children: [
+                  Center(
+                    child: Container(
+                      width: 200,
+                      height: 300,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      padding: const EdgeInsets.all(30),
+                      alignment: Alignment.center,
+                      child: Container(
+                        width: 75,
+                        height: 75,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: Text(
+                            '$_counter',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
             ),
           ],
         ),
@@ -105,6 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //add
       //add main
 
+      //add develop
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
